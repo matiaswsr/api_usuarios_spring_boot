@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/usuariosdb
+    username: postgres
+    password: 39510153
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: 8080
+security:
+  jwt:
+    secret: "ESTA_DEBE_SER_UNA_CLAVE_LARGA_Y_SEGURA_QUE_LUEGO_VA_EN_VARIABLE_DE_ENTORNO"
+    expiration: 3600000
+
